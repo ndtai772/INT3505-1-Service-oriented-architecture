@@ -4,24 +4,34 @@ import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.Arrays;
+import java.util.stream.IntStream;
 
 public class Server implements IOperations {
     private static final int PORT = 1099;
-    private static final String REGISTRY_NAME = "services";
+    private static final String REGISTRY_NAME = "operations";
+
+    private static class PairImpl implements IPair {
+        private final int sum, product;
+
+        public PairImpl(int[] inputArr) {
+            sum = Arrays.stream(inputArr).sum();
+            product = Arrays.stream(inputArr).reduce(1, (a, b) -> a * b);
+        }
+
+        @Override
+        public int getSum() throws RemoteException {
+            return sum;
+        }
+
+        @Override
+        public int getMul() throws RemoteException {
+            return product;
+        }
+    }
 
     @Override
-    public Pair getSumAndMul() throws RemoteException {
-        return (Pair) UnicastRemoteObject.exportObject(new Pair() {
-            @Override
-            public int getSum(int[] srcArr) {
-                return Arrays.stream(srcArr).sum();
-            }
-
-            @Override
-            public int getMul(int[] srcArr) {
-                return Arrays.stream(srcArr).reduce(1, (a, b) -> a * b);
-            }
-        }, 0);
+    public IPair getSumAndMul(int[] srcArr) throws RemoteException {
+        return (IPair) UnicastRemoteObject.exportObject(new PairImpl(srcArr), 0);
     }
 
     public static void main(String... args) {

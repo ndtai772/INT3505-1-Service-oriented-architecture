@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class Client {
     private static final int PORT = 1099;
-    private static final String REGISTRY_NAME = "services";
+    private static final String REGISTRY_NAME = "operations";
 
     public static void main(String... args) throws RemoteException {
         System.out.println("[Client] Client start");
@@ -32,8 +32,8 @@ public class Client {
             String input = scanner.nextLine();
             if (input.equals("q")) break;
             var inputArr = Arrays.stream(input.split("\\s+")).mapToInt(Integer::parseInt).toArray();
-            var response = servicesStub.getSumAndMul();
-            System.out.printf("[Client] Response -> sum = %d, product = %d\n", response.getSum(inputArr), response.getMul(inputArr));
+            var response = servicesStub.getSumAndMul(inputArr);
+            System.out.printf("[Client] Response -> sum = %d, product = %d\n", response.getSum(), response.getMul());
         }
         System.out.println("[Client] Quit");
     }
