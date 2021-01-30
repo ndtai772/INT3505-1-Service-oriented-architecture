@@ -14,4 +14,4 @@
 
 Note: rmiregistry được tạo ngay trong [Server.java](./Server.java) nên không cần khởi tạo rmiregistry riêng, nếu rmiregistry/tiến trình khác đang sử dụng cổng 1099 thì có thể tắt tiến trình đó hoặc dổi giá trị port trong mã nguồn ở 2 tệp [Client.java](./Client.java) và [Server.java](./Server.java)
 ## Ảnh chụp màn hình
-![](./image/Screenshot_20210130_215355.png)
+![](resources/Screenshot_20210130_215355.png)
