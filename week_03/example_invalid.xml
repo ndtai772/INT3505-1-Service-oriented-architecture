@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<personalInfo xsi:noNamespaceSchemaLocation="schema.xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <surname>Nguyễn Văn</surname>
+    <givenName>An</givenName>
+    <dateOfBirth>2000-06-01</dateOfBirth>
+    <!-- studentId must match [0-9]{8} pattern -->
+    <studentId>1821234</studentId>
+    <gender>male</gender>
+    <emails>
+        <vnuMail>18021111@vnu.edu.vn</vnuMail>
+    </emails>
+    <family>
+        <person>
+            <fullName>Phan Thị Thảo</fullName>
+            <address>Anh Sơn, Nghệ An</address>
+        </person>
+        <person>
+            <fullName>Phan Thị Thảo</fullName>
+            <address>Anh Sơn, Nghệ An</address>
+        </person>
+        <!-- maxOccurs=2 -->
+        <person>
+            <fullName>Phan Thị Thảo</fullName>
+            <address>Anh Sơn, Nghệ An</address>
+        </person>
+    </family>
+</personalInfo>

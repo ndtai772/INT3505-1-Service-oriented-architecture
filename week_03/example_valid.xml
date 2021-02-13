@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<personalInfo xsi:noNamespaceSchemaLocation="schema.xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <surname>Nguyễn Đức</surname>
+    <givenName>Tài</givenName>
+    <dateOfBirth>2000-07-07</dateOfBirth>
+    <studentId>18021111</studentId>
+    <gender>male</gender>
+    <emails>
+        <vnuMail>18021111@vnu.edu.vn</vnuMail>
+        <otherMail>ndtai772@gmail.com</otherMail>
+    </emails>
+    <family>
+        <person>
+            <fullName>Phan Thị Thảo</fullName>
+            <address>Anh Sơn, Nghệ An</address>
+        </person>
+        <person>
+            <fullName>Phan Thị Thảo</fullName>
+            <address>Anh Sơn, Nghệ An</address>
+        </person>
+    </family>
+</personalInfo>
