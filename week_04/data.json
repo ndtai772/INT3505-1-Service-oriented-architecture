@@ -1,0 +1,53 @@
+[
+    {
+        "personalInfo": {
+            "surname": "Nguyen Duc",
+            "givenName": "Tai",
+            "dateOfBirth": "2000-07-07",
+            "studentId": "18021111",
+            "phoneNumber": "0389258676",
+            "gender": "male",
+            "emails": {
+                "vnuMail": "18021111@vnu.edu.vn",
+                "otherMail": "ndtai772@gmail.com"
+            },
+            "family": {
+                "person": [
+                    {
+                        "fullName": "Phan Thi Thao",
+                        "phoneNumber": "03611514511",
+                        "address": "Anh Son, Nghe An"
+                    },
+                    {
+                        "fullName": "Nguyen Duc Dinh",
+                        "phoneNumber": "09827552053",
+                        "address": "Nghe An"
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "personalInfo": {
+            "surname": "Nguyen Manh",
+            "givenName": "Hieu",
+            "dateOfBirth": "***",
+            "studentId": "17020743",
+            "phoneNumber": "0984086431",
+            "gender": "male",
+            "emails": {
+                "vnuMail": "17020743@vnu.edu.vn ",
+                "otherMail": "***"
+            },
+            "family": {
+                "person": [
+                    {
+                        "fullName": "Abc Xyz",
+                        "phoneNumber": "03611514511",
+                        "address": "Vinh Phuc"
+                    }
+                ]
+            }
+        }
+    }
+]
