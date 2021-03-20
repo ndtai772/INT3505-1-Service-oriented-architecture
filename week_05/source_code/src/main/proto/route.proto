@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option java_outer_classname = "GetStudentByIdService";
+
+service GetStudentById {
+  rpc GetStudentById(StudentId) returns (StudentInfo) {}
+}
+
+message StudentId{
+  int32 id = 1;
+}
+
+message StudentInfo{
+  int32 id = 1;
+  string name = 2;
+  string dateOfBirth = 3;
+  string email = 4;
+  string address = 5;
+}
